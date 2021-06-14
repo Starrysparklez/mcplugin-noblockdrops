@@ -1,0 +1,5 @@
+plugin:
+  debug_logs: true
+
+messages:
+  error.inventory_is_full: Не удалось поместить дроп в инвентарь, поскольку он заполнен.

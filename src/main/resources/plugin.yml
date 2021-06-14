@@ -1,0 +1,4 @@
+name: NoBlockDrops
+main: ru.starrysparklez.noblockdrops.Main
+version: 1.0.0
+description: A simple plugin for Spigot, which changes the process of collecting loot from destroyed blocks.
