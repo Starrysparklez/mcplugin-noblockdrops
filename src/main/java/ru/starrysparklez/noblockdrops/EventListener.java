@@ -31,8 +31,6 @@ public class EventListener implements Listener {
     public void onBlockBreak(BlockBreakEvent event) {
         if (event.getPlayer().getGameMode() == GameMode.CREATIVE) return;
 
-        event.setCancelled(true);
-
         Player player = event.getPlayer();
         Block block = event.getBlock();
 
@@ -69,9 +67,10 @@ public class EventListener implements Listener {
                             ChatMessageType.ACTION_BAR,
                             TextComponent.fromLegacyText(config.getConfigurationSection("messages").getString("error.inventory_is_full"))
                     );
-                    world.dropItem(block.getLocation(), item);
+                    //world.dropItem(block.getLocation(), item);
                 } else {
                     world.getBlockAt(location).setType(Material.AIR);
+                    event.setCancelled(true);
                 }
             });
         }
